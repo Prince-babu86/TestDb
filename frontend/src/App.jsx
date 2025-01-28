@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react'
 import "./App.css"
 import axios from "axios"
+import { Route, Routes } from 'react-router-dom'
+import Home from './Home'
+import CreateForm from './CreatePostForm'
 
 const App = () => {
-useEffect(()=>{
-  try {
-    let response = axios.get("https://testdb-vlco.onrender.com/")
-    .then((response)=>{
-      console.log(response.data)
-    })
-  } catch (error) {
-    
-  }
-})
+
   return (
-    <div>App</div>
+  <div>
+    
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/Create' element={<CreateForm/>}/>
+    </Routes>
+  </div>
   )
 }
 
