@@ -3,11 +3,12 @@ const app = express()
 const db = require("./config/db")
 const Post = require('./models/Post')
 require("dotenv").config()
+const cors = require("cors")
 db()
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-
+app.use(cors())
 
 app.get("/" , async function(req , res){
     let posts = await Post.find()
