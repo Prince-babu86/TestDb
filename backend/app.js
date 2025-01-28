@@ -10,7 +10,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
 app.use(cors({
+<<<<<<< HEAD
     origin: "https://testdb-1.onrender.com" // Frontend URL
+=======
+    origin: "https://testdb-1.onrender.com/" // Frontend URL
+>>>>>>> b80f84cb9d41d1a6cf4ede34dc924745c667fbbf
   }));
 
 app.get("/" , async function(req , res){
