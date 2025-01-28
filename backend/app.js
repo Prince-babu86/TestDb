@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
 app.use(cors({
-    origin: "http://localhost:5173" // Frontend URL
+    origin: "https://testdb-1.onrender.com/" // Frontend URL
   }));
 
 app.get("/" , async function(req , res){
